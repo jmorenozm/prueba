@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
-
 
 <head>
 
-
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <title>Zaimella Consulting</title>
 
-
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-
 
 body{
 font-family:Arial;
@@ -27,13 +19,19 @@ margin:0;
 background:#f4f6f9;
 }
 
+/* MENU */
+
 header{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:15px 40px;
 background:#0a2540;
 color:white;
+z-index:1000;
 }
 
 nav a{
@@ -43,12 +41,14 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
 display:flex;
 align-items:center;
 justify-content:center;
-padding:80px;
-gap:50px;
+gap:60px;
+padding:140px 40px 80px 40px;
 background:white;
 flex-wrap:wrap;
 }
@@ -58,23 +58,29 @@ max-width:500px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero-img img{
-width:400px;
+width:420px;
 border-radius:10px;
 }
+
+/* BOTONES */
 
 button{
 background:#ff7a00;
 color:white;
 border:none;
-padding:12px 25px;
+padding:14px 26px;
 border-radius:6px;
 cursor:pointer;
-margin-top:15px;
 font-size:16px;
+margin-top:15px;
+}
+
+button:hover{
+opacity:0.9;
 }
 
 .curso-btn{
@@ -82,8 +88,10 @@ background:#0077ff;
 margin-left:10px;
 }
 
+/* SERVICIOS */
+
 .servicios{
-padding:60px;
+padding:80px;
 text-align:center;
 }
 
@@ -102,6 +110,13 @@ padding:30px;
 border-radius:12px;
 box-shadow:0 6px 20px rgba(0,0,0,0.1);
 transition:0.3s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
@@ -115,9 +130,11 @@ color:#0077ff;
 margin-bottom:15px;
 }
 
+/* BENEFICIOS */
+
 .beneficios{
 background:#eef2f7;
-padding:60px;
+padding:80px;
 text-align:center;
 }
 
@@ -127,10 +144,19 @@ padding:25px;
 border-radius:10px;
 width:260px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
+opacity:0;
+transform:translateY(40px);
 }
 
+.beneficio.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* TESTIMONIOS */
+
 .testimonios{
-padding:60px;
+padding:80px;
 text-align:center;
 }
 
@@ -142,12 +168,16 @@ width:300px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* FOOTER */
+
 footer{
 background:#0a2540;
 color:white;
 text-align:center;
 padding:40px;
 }
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -164,35 +194,23 @@ align-items:center;
 justify-content:center;
 }
 
-
-
 </style>
-
 
 </head>
 
-
 <body>
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <header>
 
-<div class="logo">
-Zaimella Consulting
-</div>
+<h2>Zaimella Consulting</h2>
 
 <nav>
 <a href="#servicios">Servicios</a>
 <a href="#beneficios">Beneficios</a>
 <a href="#testimonios">Clientes</a>
-<a href="#contacto">Contacto</a>
 </nav>
 
 </header>
-
 
 <section class="hero">
 
@@ -201,15 +219,17 @@ Zaimella Consulting
 <h1>Potenciamos tu empresa con People Analytics</h1>
 
 <p>
-Consultoría en talento humano basada en datos,
-desarrollo organizacional y capacitación empresarial.
+ConsultorÃ­a en talento humano basada en datos,
+desarrollo organizacional y capacitaciÃ³n empresarial.
 </p>
 
-<button onclick="contacto()">Contáctanos</button>
+<button onclick="contacto()">ContÃ¡ctanos</button>
 
 <button class="curso-btn"
 onclick="window.open('http://capacitacion.zaimella.com')">
+
 Ver cursos
+
 </button>
 
 </div>
@@ -222,91 +242,111 @@ Ver cursos
 
 </section>
 
-
-<section id="servicios" class="servicios">
+<section class="servicios" id="servicios">
 
 <h2>Nuestros Servicios</h2>
 
 <div class="grid">
 
 <div class="card">
+
 <i class="fa-solid fa-chart-line icono"></i>
+
 <h3>People Analytics</h3>
-<p>Análisis de datos de talento humano para mejorar decisiones.</p>
+
+<p>AnÃ¡lisis de datos de talento humano para mejorar decisiones.</p>
+
 </div>
 
 <div class="card">
+
 <i class="fa-solid fa-graduation-cap icono"></i>
-<h3>Capacitación</h3>
-<p>Programas de formación empresarial y liderazgo.</p>
+
+<h3>CapacitaciÃ³n</h3>
+
+<p>Programas de formaciÃ³n empresarial.</p>
+
 </div>
 
 <div class="card">
+
 <i class="fa-solid fa-users icono"></i>
-<h3>Consultoría</h3>
-<p>Diagnóstico organizacional y mejora del desempeño.</p>
+
+<h3>ConsultorÃ­a</h3>
+
+<p>Desarrollo organizacional.</p>
+
 </div>
 
 </div>
 
 </section>
 
+<section class="beneficios" id="beneficios">
 
-<section id="beneficios" class="beneficios">
-
-<h2>¿Por qué trabajar con nosotros?</h2>
+<h2>Â¿Por quÃ© trabajar con nosotros?</h2>
 
 <div class="grid">
 
 <div class="beneficio">
-<h3>?? Decisiones basadas en datos</h3>
-<p>Usamos analítica avanzada para mejorar la gestión del talento.</p>
+
+<h3>ðŸ“Š Decisiones con datos</h3>
+
+<p>Utilizamos analÃ­tica avanzada para mejorar la gestiÃ³n del talento.</p>
+
 </div>
 
 <div class="beneficio">
-<h3>?? Mejora de productividad</h3>
-<p>Optimizamos procesos de talento humano.</p>
+
+<h3>ðŸš€ Mejora de productividad</h3>
+
+<p>Optimizamos procesos organizacionales.</p>
+
 </div>
 
 <div class="beneficio">
-<h3>?? Formación especializada</h3>
-<p>Capacitamos equipos con metodologías modernas.</p>
+
+<h3>ðŸŽ“ FormaciÃ³n especializada</h3>
+
+<p>Capacitamos equipos con metodologÃ­as modernas.</p>
+
 </div>
 
 </div>
 
 </section>
 
-
-<section id="testimonios" class="testimonios">
+<section class="testimonios" id="testimonios">
 
 <h2>Lo que dicen nuestros clientes</h2>
 
 <div class="grid">
 
 <div class="testimonio">
-<p>"Excelente consultoría, mejoramos nuestros indicadores de talento."</p>
+
+<p>"Excelente consultorÃ­a, mejoramos nuestros indicadores de talento."</p>
+
 <strong>Gerente de RRHH</strong>
+
 </div>
 
 <div class="testimonio">
-<p>"El programa de capacitación fue muy útil para nuestro equipo."</p>
+
+<p>"El programa de capacitaciÃ³n fue muy Ãºtil para nuestro equipo."</p>
+
 <strong>Director de Operaciones</strong>
+
 </div>
 
 </div>
 
 </section>
 
+<footer>
 
-<footer id="contacto">
-
-<h3>Contáctanos</h3>
-
-<p>?? 0981668059</p>
+<p>Contacto: 0981668059</p>
 
 </footer>
-
 
 <a href="https://wa.me/593981668059"
 class="whatsapp"
@@ -316,17 +356,35 @@ target="_blank">
 
 </a>
 
-
 <script>
 
-
-
 function contacto(){
-alert("Escríbenos al WhatsApp 0981668059");
+
+alert("EscrÃ­benos al WhatsApp 0981668059")
+
 }
 
-</script>
+let elementos=document.querySelectorAll(".card,.beneficio")
 
+window.addEventListener("scroll",function(){
+
+let altura=window.innerHeight
+
+elementos.forEach(el=>{
+
+let distancia=el.getBoundingClientRect().top
+
+if(distancia<altura-100){
+
+el.classList.add("visible")
+
+}
+
+})
+
+})
+
+</script>
 
 </body>
 
