@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Zaimella Consulting</title>
+
+
+
+<style>
+
+
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#0a2540;
+color:white;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:80px;
+gap:50px;
+background:white;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero-img img{
+width:400px;
+border-radius:10px;
+}
+
+button{
+background:#ff7a00;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:6px;
+cursor:pointer;
+margin-top:15px;
+font-size:16px;
+}
+
+.curso-btn{
+background:#0077ff;
+margin-left:10px;
+}
+
+.servicios{
+padding:60px;
+text-align:center;
+}
+
+.grid{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+background:white;
+width:260px;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.icono{
+font-size:40px;
+color:#0077ff;
+margin-bottom:15px;
+}
+
+.beneficios{
+background:#eef2f7;
+padding:60px;
+text-align:center;
+}
+
+.beneficio{
+background:white;
+padding:25px;
+border-radius:10px;
+width:260px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.testimonios{
+padding:60px;
+text-align:center;
+}
+
+.testimonio{
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+footer{
+background:#0a2540;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<header>
+
+<div class="logo">
+Zaimella Consulting
+</div>
+
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#testimonios">Clientes</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Potenciamos tu empresa con People Analytics</h1>
+
+<p>
+Consultoría en talento humano basada en datos,
+desarrollo organizacional y capacitación empresarial.
+</p>
+
+<button onclick="contacto()">Contáctanos</button>
+
+<button class="curso-btn"
+onclick="window.open('http://capacitacion.zaimella.com')">
+Ver cursos
+</button>
+
+</div>
+
+<div class="hero-img">
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+
+</div>
+
+</section>
+
+
+<section id="servicios" class="servicios">
+
+<h2>Nuestros Servicios</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-chart-line icono"></i>
+<h3>People Analytics</h3>
+<p>Análisis de datos de talento humano para mejorar decisiones.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-graduation-cap icono"></i>
+<h3>Capacitación</h3>
+<p>Programas de formación empresarial y liderazgo.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-users icono"></i>
+<h3>Consultoría</h3>
+<p>Diagnóstico organizacional y mejora del desempeño.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="beneficios" class="beneficios">
+
+<h2>¿Por qué trabajar con nosotros?</h2>
+
+<div class="grid">
+
+<div class="beneficio">
+<h3>?? Decisiones basadas en datos</h3>
+<p>Usamos analítica avanzada para mejorar la gestión del talento.</p>
+</div>
+
+<div class="beneficio">
+<h3>?? Mejora de productividad</h3>
+<p>Optimizamos procesos de talento humano.</p>
+</div>
+
+<div class="beneficio">
+<h3>?? Formación especializada</h3>
+<p>Capacitamos equipos con metodologías modernas.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="testimonios" class="testimonios">
+
+<h2>Lo que dicen nuestros clientes</h2>
+
+<div class="grid">
+
+<div class="testimonio">
+<p>"Excelente consultoría, mejoramos nuestros indicadores de talento."</p>
+<strong>Gerente de RRHH</strong>
+</div>
+
+<div class="testimonio">
+<p>"El programa de capacitación fue muy útil para nuestro equipo."</p>
+<strong>Director de Operaciones</strong>
+</div>
+
+</div>
+
+</section>
+
+
+<footer id="contacto">
+
+<h3>Contáctanos</h3>
+
+<p>?? 0981668059</p>
+
+</footer>
+
+
+<a href="https://wa.me/593981668059"
+class="whatsapp"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+
+
+
+function contacto(){
+alert("Escríbenos al WhatsApp 0981668059");
+}
+
+</script>
+
+
+</body>
+
+</html>
